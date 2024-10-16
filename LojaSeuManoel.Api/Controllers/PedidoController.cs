@@ -15,7 +15,7 @@ namespace LojaSeuManoel.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CriarPedido([FromBody] List<Pedido> pedido)
+        public async Task<IActionResult> CriarPedido([FromBody] List<EntradaPedido> pedido)
         {
             var pedidoCriado = await _pedidoService.ProcessarPedidoAsync(pedido);
             return Ok(pedidoCriado);

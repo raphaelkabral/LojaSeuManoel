@@ -27,9 +27,9 @@ namespace LojaSeuManoel.Application.Service
             return (List<Caixa>)await _pedidoRepository.GetAllAsync();
         }
 
-        public async Task<List<Domain.DTO.Saida.Pedido>> ProcessarPedidoAsync(List<Domain.DTO.Entrada.Pedido> pedido)
+        public async Task<List<Domain.DTO.Saida.SaidaPedido>> ProcessarPedidoAsync(List<Domain.DTO.Entrada.EntradaPedido> pedido)
         {
-            List<Domain.DTO.Saida.Pedido> resultado = new();
+            List<Domain.DTO.Saida.SaidaPedido> resultado = new();
             foreach (var item in pedido)
             {
                 var embalagens = await EmbalarProdutos(item.Produtos);

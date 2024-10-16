@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LojaSeuManoel.Domain.DTO.Entrada
+namespace LojaSeuManoel.Domain.DTO.Saida
 {
-    public class Pedido
+    public class SaidaPedido
     {
         public int Id { get; set; }
-        public List<Produto> Produtos { get; set; } = new();
+        public List<CaixaEmbala> Caixas { get; set; } = new();
     }
 }

@@ -11,6 +11,6 @@ namespace LojaSeuManoel.Application.IService
     {
         Task<Pedido> AddPedidoAsync(Pedido pedido);
         Task<List<Caixa>> GetCaixasAsync();
-        Task<List<Domain.DTO.Saida.Pedido>> ProcessarPedidoAsync(List<Domain.DTO.Entrada.Pedido> pedido);
+        Task<List<Domain.DTO.Saida.SaidaPedido>> ProcessarPedidoAsync(List<Domain.DTO.Entrada.EntradaPedido> pedido);
     }
 }
