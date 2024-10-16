@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  lojaseumanoel.api:
+    image: ${DOCKER_REGISTRY-}lojaseumanoelapi
+    build:
+      context: .
+      dockerfile: LojaSeuManoel.Api/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=localhost,1433;Database=Store;User=sa;Password=Store@123;Integrated Security=false;TrustServerCertificate=True; 
+
+  db:
+    image: mcr.microsoft.com/mssql/server
+    environment:
+      - SA_PASSWORD=Your_password123
+      - ACCEPT_EULA=Y
+    ports:
+      - "1433:1433"
